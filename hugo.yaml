@@ -1,0 +1,31 @@
+baseURL: "https://mouhamedgaye2004-tech.github.io/"
+languageCode: "fr-FR"
+title: "Mouhamed Gaye | IT Lab"
+theme: "PaperMod"
+
+params:
+  homeInfoParams:
+    Title: "Mouhamed Gaye"
+    Content: "Étudiant Cybersécurité B3 · Alternance 2026 · Labs réseau, systèmes et DevSecOps"
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/mouhamedgaye2004-tech"
+    - name: "linkedin"
+      url: "https://linkedin.com/in/mouhamed-gaye-cyber"
+  showReadingTime: true
+  showShareButtons: false
+  showPostNavLinks: true
+  showBreadCrumbs: true
+  showCodeCopyButtons: true
+
+menu:
+  main:
+    - name: "Labs"
+      url: "/labs/"
+      weight: 1
+    - name: "Blog"
+      url: "/blog/"
+      weight: 2
+    - name: "À propos"
+      url: "/about/"
+      weight: 3
