@@ -83,7 +83,7 @@ Si une etape echoue, le pipeline s arrete. Le code defectueux ne peut pas attein
 
 SonarQube analyse le code pour detecter bugs, vulnerabilites, code smells et duplications.
 
-Resultats obtenus : Bugs 1, Vulnerabilites 0, Code Smells 0, Duplication 0.0%, Statut Passed.
+Resultats obtenus : Bugs 1, Vulnerabilites 0, Code Smells 0, Duplication 0%, Statut Passed.
 
 ![](/images/sonarqube-dashboard.jpg)
 
@@ -107,12 +107,12 @@ Le dashboard montre CPU, RAM, disque et reseau en temps reel.
 
 docker images - lister les images
 docker ps -a - lister les conteneurs
-docker run -d -p 3000:3000 app - lancer un conteneur
+docker run -d -p 3000 app - lancer un conteneur
 docker stop - arreter un conteneur
 docker build -t nom . - construire une image
 docker push user/image - publier sur DockerHub
 docker logs - voir les logs
-docker exec -it bash - terminal dans un conteneur
+docker exec bash - terminal dans un conteneur
 
 ---
 
