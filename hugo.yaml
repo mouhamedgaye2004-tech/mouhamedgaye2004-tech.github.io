@@ -6,7 +6,7 @@ theme: "PaperMod"
 params:
   homeInfoParams:
     Title: "Mouhamed Gaye"
-    Content: "Étudiant Cybersécurité B3 · Alternance 2026 · Labs réseau, systèmes et DevSecOps"
+    Content: "Etudiant Cybersecurite B3 · Alternance 2026 · Labs reseau, systemes et DevSecOps"
   socialIcons:
     - name: "github"
       url: "https://github.com/mouhamedgaye2004-tech"
@@ -23,6 +23,6 @@ menu:
     - name: "Labs"
       url: "/labs/"
       weight: 1
-    - name: "À propos"
+    - name: "A propos"
       url: "/about/"
       weight: 2
