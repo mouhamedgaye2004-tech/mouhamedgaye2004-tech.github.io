@@ -7,8 +7,6 @@ categories: ["Labs"]
 description: "Mise en place d'un pipeline CI/CD complet avec Docker, Jenkins, SonarQube, Prometheus et Grafana sur WSL/Ubuntu."
 showToc: true
 TocOpen: false
-cover:
-  alt: "Pipeline CI/CD DevOps complet"
 ---
 
 ## Objectif du projet

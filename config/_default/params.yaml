@@ -1,0 +1,16 @@
+﻿colorScheme: ocean
+defaultAppearance: dark
+autoSwitchAppearance: true
+
+enableSearch: true
+enableCodeCopy: true
+
+header:
+  layout: basic
+
+footer:
+  showCopyright: true
+
+list:
+  showCards: true
+  groupByYear: false

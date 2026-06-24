@@ -1,4 +1,4 @@
-baseURL: "https://mouhamedgaye2004-tech.github.io/"
+﻿baseURL: "https://mouhamedgaye2004-tech.github.io/"
 languageCode: "fr-FR"
 title: "Mouhamed Gaye | IT Lab"
 theme: "PaperMod"
@@ -23,9 +23,6 @@ menu:
     - name: "Labs"
       url: "/labs/"
       weight: 1
-    - name: "Blog"
-      url: "/blog/"
-      weight: 2
     - name: "À propos"
       url: "/about/"
-      weight: 3
+      weight: 2

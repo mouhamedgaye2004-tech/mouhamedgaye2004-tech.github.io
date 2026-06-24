@@ -7,8 +7,6 @@ categories: ["Labs"]
 description: "Capture et analyse de trafic DNS, HTTP/HTTPS, ARP et ICMP sur un réseau local avec Wireshark."
 showToc: true
 TocOpen: false
-cover:
-  alt: "Capture Wireshark du trafic réseau local"
 ---
 
 ## Objectif du lab
