@@ -28,7 +28,7 @@ Ce lab analyse le trafic reseau en temps reel avec Wireshark pour comprendre les
 
 Au demarrage, Wireshark affiche tous les paquets en temps reel. Sans filtre, le volume est enorme. Les filtres permettent d'isoler exactement le protocole voulu.
 
-![Capture Wireshark globale sans filtre](/images/wireshark/wireshark-capture-globale.png)
+![](/images/wireshark/wireshark-capture-globale.png)
 
 ---
 
@@ -45,15 +45,15 @@ nslookup nonexistant-xyz123.com
 
 Wireshark montre les echanges en paires : requete (Standard query) puis reponse (Standard query response).
 
-![Liste des paquets DNS avec echanges Query et Response](/images/wireshark/dns-query-response.png)
+![](/images/wireshark/dns-query-response.png)
 
 En cliquant sur un paquet de reponse, on voit les couches reseau : Ethernet, IP, UDP port 53, DNS.
 
-![Details du paquet DNS selectionne](/images/wireshark/dns-response-detail.png)
+![](/images/wireshark/dns-response-detail.png)
 
 Structure interne de la reponse DNS :
 
-![Structure interne du paquet DNS](/images/wireshark/dns-details-ttl.png)
+![](/images/wireshark/dns-details-ttl.png)
 
 - Transaction ID : identifiant unique pour associer requete et reponse
 - Flags : Standard query response, No error
@@ -61,11 +61,11 @@ Structure interne de la reponse DNS :
 
 Section Answers avec IP resolue et TTL :
 
-![Section Answers - CNAME et IP resolue](/images/wireshark/dns-answers-ttl.png)
+![](/images/wireshark/dns-answers-ttl.png)
 
 Pour alive.github.com : CNAME vers live.github.com puis IP 140.82.113.25
 
-![TTL visible dans les details DNS](/images/wireshark/dns-ttl.png)
+![](/images/wireshark/dns-ttl.png)
 
 Le TTL indique combien de secondes la reponse peut etre mise en cache. DNS fonctionne en UDP port 53.
 
@@ -78,13 +78,13 @@ Le TTL indique combien de secondes la reponse peut etre mise en cache. DNS fonct
 Filtre : http
 Navigation sur http://neverssl.com
 
-![Trafic HTTP capture - requetes GET et reponses 200 OK](/images/wireshark/http-trafic-clair.png)
+![](/images/wireshark/http-trafic-clair.png)
 
 On voit : GET / HTTP/1.1, HTTP/1.1 200 OK, HTTP/1.1 301 Moved Permanently, port 80.
 
 Clic droit sur un paquet HTTP puis Suivre puis Flux TCP :
 
-![Flux TCP HTTP reconstitue - tout est lisible](/images/wireshark/http-flux-tcp.png)
+![](/images/wireshark/http-flux-tcp.png)
 
 En rouge (ma requete) visible par n'importe qui sur le reseau : Host neverssl.com, User-Agent Mozilla Windows NT 10.0, Accept-Language fr-FR.
 En bleu (reponse serveur) : HTTP/1.1 200 OK, Server Apache/2.4.66.
@@ -96,13 +96,13 @@ Sur un Wi-Fi public, n'importe qui avec Wireshark verrait ces donnees en clair.
 Filtre : tls
 Navigation sur https://github.com
 
-![Trafic HTTPS capture - tout est chiffre](/images/wireshark/https-trafic-chiffre.png)
+![](/images/wireshark/https-trafic-chiffre.png)
 
 Difference immediate : TLSv1.2/1.3, Application Data illisible, port 443. Aucun header visible.
 
 Filtre pour isoler le Client Hello : tls.handshake.type == 1
 
-![SNI visible dans le Client Hello TLS](/images/wireshark/tls-client-hello-sni.png)
+![](/images/wireshark/tls-client-hello-sni.png)
 
 Server Name lh3.googleusercontent.com visible en clair dans le SNI. On peut savoir quels sites sont visites meme en HTTPS.
 
@@ -120,22 +120,22 @@ Server Name lh3.googleusercontent.com visible en clair dans le SNI. On peut savo
 
 Filtre : arp
 
-![Requetes ARP broadcasts sur le reseau local](/images/wireshark/arp-who-has.png)
+![](/images/wireshark/arp-who-has.png)
 
 ARP resout les IP en adresses MAC. On voit les broadcasts Who has 192.168.x.x Tell 192.168.1.24
 
-![Details d'un paquet ARP](/images/wireshark/arp-details.png)
+![](/images/wireshark/arp-details.png)
 
 ### ICMP
 
 Filtre : icmp
 Ping vers 127.0.0.1 (loopback)
 
-![Paquets ICMP Echo Request et Echo Reply](/images/wireshark/icmp-echo-request-reply.png)
+![](/images/wireshark/icmp-echo-request-reply.png)
 
 Chaque ping genere une paire : Echo Request type 8 et Echo Reply type 0.
 
-![Details d'un paquet ICMP](/images/wireshark/icmp-details.png)
+![](/images/wireshark/icmp-details.png)
 
 Le ping vers 8.8.8.8 etait bloque par le pare-feu Windows. C'est une configuration courante en entreprise pour eviter la reconnaissance reseau.
 
@@ -145,11 +145,11 @@ Le ping vers 8.8.8.8 etait bloque par le pare-feu Windows. C'est une configurati
 
 Menu Statistiques puis Hierarchie des protocoles :
 
-![Hierarchie des protocoles Wireshark](/images/wireshark/stats-protocoles.png)
+![](/images/wireshark/stats-protocoles.png)
 
 Menu Statistiques puis Conversations :
 
-![Tableau des conversations reseau](/images/wireshark/stats-conversations.png)
+![](/images/wireshark/stats-conversations.png)
 
 Ces statistiques permettent d'identifier une machine qui genere un volume anormal de trafic, signe possible d'une infection ou d'une exfiltration de donnees.
 

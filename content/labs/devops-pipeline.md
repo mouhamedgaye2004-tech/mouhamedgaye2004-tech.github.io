@@ -58,7 +58,7 @@ Une fois le script termine, on verifie que tous les conteneurs sont actifs :
 docker ps
 ```
 
-![Conteneurs Docker actifs avec tous les services](/images/docker-ps.png)
+![](/images/docker-ps.png)
 
 Tous les services sont accessibles depuis le navigateur Windows via localhost :
 
@@ -89,7 +89,7 @@ git commit -m "first commit"
 git push -u origin main
 ```
 
-![Depot GitHub avec Dockerfile et Jenkinsfile visibles](/images/github-repo.jpg)
+![](/images/github-repo.jpg)
 
 ### Structure du depot
 
@@ -142,7 +142,7 @@ docker build -t devops-app .
 docker push monusername/devops-app:latest
 ```
 
-![Application Task Manager deployee et accessible dans le navigateur](/images/devops-app.jpg)
+![](/images/devops-app.jpg)
 
 ---
 
@@ -156,7 +156,7 @@ Le pipeline est defini dans un fichier Jenkinsfile ecrit en Groovy, versionne av
 
 ### Les 7 etapes du pipeline
 
-![Pipeline Jenkins avec toutes les etapes au vert](/images/jenkins-pipeline.jpg)
+![](/images/jenkins-pipeline.jpg)
 
 | Etape | Duree | Ce qui se passe |
 |---|---|---|
@@ -184,7 +184,7 @@ SonarQube analyse automatiquement le code source pour detecter :
 
 ### Resultats obtenus
 
-![Dashboard SonarQube avec les metriques du projet](/images/sonarqube-dashboard.jpg)
+![](/images/sonarqube-dashboard.jpg)
 
 | Metrique | Resultat | Signification |
 |---|---|---|
@@ -210,7 +210,7 @@ La supervision fonctionne en 3 couches :
 
 ### Dashboard Grafana
 
-![Dashboard Grafana avec metriques CPU, RAM et reseau en temps reel](/images/grafana-dashboard.jpg)
+![](/images/grafana-dashboard.jpg)
 
 Le dashboard montre en temps reel :
 - **CPU** : pourcentage d'utilisation du processeur
