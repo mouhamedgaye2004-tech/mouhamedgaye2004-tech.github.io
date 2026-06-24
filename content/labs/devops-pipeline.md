@@ -119,7 +119,7 @@ Sans Docker, l'application fonctionne sur le PC du developpeur mais peut ne pas 
 ```dockerfile
 FROM node:18-alpine
 WORKDIR /app
-COPY package*.json ./
+COPY package.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
@@ -129,7 +129,7 @@ CMD ["npm", "start"]
 Explication ligne par ligne :
 - **FROM node:18-alpine** : image Linux legere avec Node.js 18 preinstalle
 - **WORKDIR /app** : dossier de travail dans le conteneur
-- **COPY package*.json ./** : copie des fichiers de dependances en premier
+- **COPY package.json ./** : copie des fichiers de dependances en premier
 - **RUN npm install** : installation des dependances (mise en cache par Docker)
 - **COPY . .** : copie du reste du code source
 - **EXPOSE 3000** : l'application ecoute sur le port 3000
