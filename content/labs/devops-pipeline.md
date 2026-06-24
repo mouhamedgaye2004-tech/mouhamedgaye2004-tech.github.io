@@ -39,7 +39,7 @@ Git est le point de depart de tout pipeline DevOps. Chaque push declenche Jenkin
 
 git init projet_devops
 git add .
-git commit -m "first commit"
+git commit -m first commit
 git push -u origin main
 
 ![](/images/github-repo.jpg)
