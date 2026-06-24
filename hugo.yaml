@@ -26,3 +26,7 @@ menu:
     - name: "A propos"
       url: "/about/"
       weight: 2
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
